@@ -5,6 +5,8 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+alias wanip="dig +short myip.opendns.com @resolver1.opendns.com"
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -15,4 +17,10 @@ setopt NO_NOMATCH
 
 # Setup rbenv
 eval "$(rbenv init -)"
+
+# Setup Node version manager.
+. ~/.nvm/nvm.sh
+
+# Setup rust source path.
+export RUST_SRC_PATH=$HOME/code/rusty/rust/src
 

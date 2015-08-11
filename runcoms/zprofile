@@ -38,6 +38,7 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the the list of directories that cd searches.
 cdpath=(
+  $HOME
   $HOME/code
   $cdpath
 )
@@ -75,10 +76,3 @@ fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 
-#
-# Python virtualenv setup
-#
-
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
